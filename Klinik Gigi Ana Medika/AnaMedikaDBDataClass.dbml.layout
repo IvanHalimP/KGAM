@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 11.25" name="AnaMedikaDBDataClass">
+  <DataContextMoniker Name="/AnaMedikaDBDataClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9c4ab371-0d8e-4057-a0da-5eea1f85aa7a" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/detAdm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0aa03d92-0760-489d-8291-c39ddbcc77da" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59bedfae-eaab-4749-a8b8-a0351affef3c" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/msUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1e2ba51-c4b5-49b5-9eae-e883b36fd3bb" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="800a3769-7a80-415f-a460-343fe9f93040" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/detExpense" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36814c16-3a3b-4623-b4ac-a95827fbf80e" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0ca0e27-8c6d-423d-9706-1f357c37a1d3" absoluteBounds="3.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/detLab" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd34b186-5162-4f9e-9ba5-8f192ba22f2b" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70b30284-33b6-45f5-8bae-8191e9062d53" absoluteBounds="6.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/detPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b399bdb6-a806-40d0-a8e1-86587b1b1178" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="911bd4f4-fa14-4b34-bcb2-23345df69af0" absoluteBounds="0.75, 6.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/detTransaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3931b8b-90c2-4038-a57b-485d769892b0" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d00cb62d-65dd-455c-9d7d-4b5b81cfbc6b" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/hdrTransaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94c5d462-e386-4dcf-a17d-1871921ac22d" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24ca9d43-0b8a-4cbe-b034-698ff6499864" absoluteBounds="3.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/msDoctor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af959552-5254-489e-a593-4a7b441f39a1" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7cb355a-3202-4276-8bcb-6961ba4bdb2a" absoluteBounds="6.75, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/msHonor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc36679a-cd85-43c2-8080-2ef82b9ef515" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="156269b3-7f2e-4d7f-86cb-bda787d60335" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/msPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39b98b64-1de6-447e-bc92-dd6267403035" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de91a7e8-b189-44ab-8dea-d63dc28ea8a5" absoluteBounds="0.75, 9.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/msTax" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f3b62fe-2656-4203-9ebe-e41ab1f3b431" absoluteBounds="0.765, 10.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="738867a2-e520-4b7e-902d-ba0fb8c0ad15" absoluteBounds="9.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AnaMedikaDBDataClassDataContext/msTreatment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a11c8417-9788-4607-86c4-827307f58bbe" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

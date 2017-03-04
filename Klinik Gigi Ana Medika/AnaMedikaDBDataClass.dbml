@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AnaMedikaDB" Class="AnaMedikaDBDataClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AnaMedikaDB.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Klinik_Gigi_Ana_Medika.Properties.Settings" SettingsPropertyName="AnaMedikaDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.detAdm" Member="detAdms">
+    <Type Name="detAdm">
+      <Column Name="admId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TrxDate" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msUser" Member="msUsers">
+    <Type Name="msUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detExpense" Member="detExpenses">
+    <Type Name="detExpense">
+      <Column Name="TrxDate" Type="System.String" DbType="VarChar(14) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detLab" Member="detLabs">
+    <Type Name="detLab">
+      <Column Name="detLabId" Type="System.String" DbType="VarChar(14) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="detTrxId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detPayment" Member="detPayments">
+    <Type Name="detPayment">
+      <Column Name="detId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TrxId" Type="System.String" DbType="NVarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="detTrxId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TrxDate" Type="System.String" DbType="NVarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remnant" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detTransaction" Member="detTransactions">
+    <Type Name="detTransaction">
+      <Column Name="detTrxId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TrxId" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="TrtId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LabPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Disc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hdrTransaction" Member="hdrTransactions">
+    <Type Name="hdrTransaction">
+      <Column Name="TrxId" Type="System.String" DbType="VarChar(14) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocId" Type="System.String" DbType="VarChar(21) NOT NULL" CanBeNull="false" />
+      <Column Name="PtnId" Type="System.String" DbType="VarChar(21) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentStatus" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msDoctor" Member="msDoctors">
+    <Type Name="msDoctor">
+      <Column Name="DoctorId" Type="System.String" DbType="VarChar(21) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SIP" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Honor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msHonor" Member="msHonors">
+    <Type Name="msHonor">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Clinics" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Doctors" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msPatient" Member="msPatients">
+    <Type Name="msPatient">
+      <Column Name="PatientId" Type="System.String" DbType="VarChar(22) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RekamMedik" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msTax" Member="msTaxes">
+    <Type Name="msTax">
+      <Column Name="Name" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msTreatment" Member="msTreatments">
+    <Type Name="msTreatment">
+      <Column Name="TreatmentId" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isCreditable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
