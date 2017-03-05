@@ -43,10 +43,19 @@ namespace Klinik_Gigi_Ana_Medika
         }
 
         void InsertTreatment() {
+            int creditVal = 0;
+            if (rbFalse.Checked)
+            {
+                creditVal = 0;
+            }else
+            {
+                creditVal = 1;
+            }
             var newTreatment = new msTreatment {
                 TreatmentId = txtId.Text,
                 Name = txtDesc.Text,
-                Price = int.Parse(txtPrice.Text)
+                Price = int.Parse(txtPrice.Text),
+                isCreditable = creditVal
             };
 
             conn.msTreatments.InsertOnSubmit(newTreatment);

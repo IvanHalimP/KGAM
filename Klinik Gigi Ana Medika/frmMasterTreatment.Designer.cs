@@ -48,6 +48,9 @@
             this.sId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rbTrue = new System.Windows.Forms.RadioButton();
+            this.rbFalse = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgTreatment)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,6 +73,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbFalse);
+            this.groupBox1.Controls.Add(this.rbTrue);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnDel);
             this.groupBox1.Controls.Add(this.btnUpd);
             this.groupBox1.Controls.Add(this.btnIns);
@@ -83,14 +89,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 313);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 128);
+            this.groupBox1.Size = new System.Drawing.Size(364, 150);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Treatment Details";
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(277, 97);
+            this.btnDel.Location = new System.Drawing.Point(283, 122);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 23);
             this.btnDel.TabIndex = 10;
@@ -100,7 +106,7 @@
             // 
             // btnUpd
             // 
-            this.btnUpd.Location = new System.Drawing.Point(277, 71);
+            this.btnUpd.Location = new System.Drawing.Point(283, 96);
             this.btnUpd.Name = "btnUpd";
             this.btnUpd.Size = new System.Drawing.Size(75, 23);
             this.btnUpd.TabIndex = 9;
@@ -110,7 +116,7 @@
             // 
             // btnIns
             // 
-            this.btnIns.Location = new System.Drawing.Point(277, 45);
+            this.btnIns.Location = new System.Drawing.Point(283, 70);
             this.btnIns.Name = "btnIns";
             this.btnIns.Size = new System.Drawing.Size(75, 23);
             this.btnIns.TabIndex = 8;
@@ -184,22 +190,21 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnRld);
             this.groupBox2.Controls.Add(this.btnTrtScr);
             this.groupBox2.Controls.Add(this.sDesc);
             this.groupBox2.Controls.Add(this.sId);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(384, 313);
+            this.groupBox2.Location = new System.Drawing.Point(384, 342);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(250, 128);
+            this.groupBox2.Size = new System.Drawing.Size(250, 121);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search Treatment";
             // 
             // btnRld
             // 
-            this.btnRld.Location = new System.Drawing.Point(6, 96);
+            this.btnRld.Location = new System.Drawing.Point(559, 313);
             this.btnRld.Name = "btnRld";
             this.btnRld.Size = new System.Drawing.Size(75, 23);
             this.btnRld.TabIndex = 9;
@@ -209,7 +214,7 @@
             // 
             // btnTrtScr
             // 
-            this.btnTrtScr.Location = new System.Drawing.Point(164, 96);
+            this.btnTrtScr.Location = new System.Drawing.Point(164, 93);
             this.btnTrtScr.Name = "btnTrtScr";
             this.btnTrtScr.Size = new System.Drawing.Size(75, 23);
             this.btnTrtScr.TabIndex = 8;
@@ -251,11 +256,43 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "TreatmentID";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "isCreditabale";
+            // 
+            // rbTrue
+            // 
+            this.rbTrue.AutoSize = true;
+            this.rbTrue.Location = new System.Drawing.Point(87, 125);
+            this.rbTrue.Name = "rbTrue";
+            this.rbTrue.Size = new System.Drawing.Size(43, 17);
+            this.rbTrue.TabIndex = 12;
+            this.rbTrue.Text = "Yes";
+            this.rbTrue.UseVisualStyleBackColor = true;
+            // 
+            // rbFalse
+            // 
+            this.rbFalse.AutoSize = true;
+            this.rbFalse.Checked = true;
+            this.rbFalse.Location = new System.Drawing.Point(136, 125);
+            this.rbFalse.Name = "rbFalse";
+            this.rbFalse.Size = new System.Drawing.Size(39, 17);
+            this.rbFalse.TabIndex = 13;
+            this.rbFalse.TabStop = true;
+            this.rbFalse.Text = "No";
+            this.rbFalse.UseVisualStyleBackColor = true;
+            // 
             // frmMasterTreatment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 453);
+            this.ClientSize = new System.Drawing.Size(648, 475);
+            this.Controls.Add(this.btnRld);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgTreatment);
@@ -296,5 +333,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRld;
+        private System.Windows.Forms.RadioButton rbFalse;
+        private System.Windows.Forms.RadioButton rbTrue;
+        private System.Windows.Forms.Label label6;
     }
 }
